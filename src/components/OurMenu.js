@@ -3,6 +3,7 @@ import "./menu.css";
 import BurgerCard from "./BurgerCard";
 import MAN from "../images/MAN.png"
 import GaleryMenu from "./GalerryMenu";
+import OurChef from "./OurChef";
 
 
 
@@ -37,7 +38,7 @@ function OurMenu(){
 </div>
 
 <GaleryMenu></GaleryMenu>
-
+<OurChef/>
 
         </div>
     )

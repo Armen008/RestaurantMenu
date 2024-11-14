@@ -508,13 +508,65 @@ margin-top: 24px;
 }
 
 .popupdiv{
-  width: 700px;
+  width: 400px;
    height: 300px ;
     background: white;
     position: absolute;
     top: 100px;
-    left: 170px;
+    left: 550px;
     transition: width 2s, height 4s;
     z-index: 10;
+    animation-name: example;
+  animation-duration: 4s;
     
 }
+
+@keyframes example {
+  from {width: 0px; height: 0px;}
+  to {width: 400px;height: 300px;}
+}
+
+.Buy{
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: #ff7400;
+  position: absolute;
+  left: 740px;
+  top: 25px;
+}
+.Buy p{
+  font-size: 10px;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  bottom: 12px;
+
+}
+.p26{
+font-size: 54px;
+
+}
+.p27{
+  font-size: 54px;
+  margin-left: 10px;
+  color: #f1852c;
+}
+.span5{
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
+}
+
+.Dis-Chef{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+
+.last-img{
+  margin-top: 130px;
+  width: 100%;
+  height: 732px;
+}
+

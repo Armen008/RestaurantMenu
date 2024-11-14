@@ -39,6 +39,7 @@ SetPopup(true)
                 <li><img className="img1" src={CART1} onClick={HandlePopup}></img></li>
 
             </ul>
+            <div className="Buy"><p>1</p></div>
        {popup ? <div className="popupdiv"></div> : null}
             <div className="line1"></div>
 
