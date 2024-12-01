@@ -4,10 +4,10 @@ import Menu from "./menu";
 import Cards from "./cards";
 
 
-function Welcome() {
+function Welcome({basketElements,selectedBurger,}) {
   return (
     <div>
-      <Menu></Menu>
+      <Menu basketElements={basketElements} selectedBurger={selectedBurger}/>
 
       <div style={{ display: "flex", gap: "40px", background: "#f2efef" }}>
         <Cards

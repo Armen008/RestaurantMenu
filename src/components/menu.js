@@ -4,13 +4,14 @@ import LOGO from "../images/LOGO.png"
 import HERO from "../images/Hero.png"
 import CART1 from "../images/CART1.png"
 import PHONE from "../images/PHONE.png"
+import BURGER from "../images/BURGER.png"
 
 
 
-function Menu(){
+function Menu({basketElements,setselectedBurger,selectedBurger}){
 
     const[popup, SetPopup] = useState(false);
-
+console.log(selectedBurger,"kkk")
     let HandlePopup = () => {
         if(popup){
          SetPopup(!popup)
@@ -18,7 +19,6 @@ function Menu(){
 SetPopup(true)
         }
     }
-
 
 
 
@@ -39,8 +39,21 @@ SetPopup(true)
                 <li><img className="img1" src={CART1} onClick={HandlePopup}></img></li>
 
             </ul>
-            <div className="Buy"><p>1</p></div>
-       {popup ? <div className="popupdiv"></div> : null}
+            <img src="images/BURGER.png"></img>
+            {/* <div className="Buy"><p>{basketElements}</p></div> */}
+       {popup ? <div className="popupdiv">
+
+        
+{selectedBurger.map((item)=>{
+return <div className="map.Dis">
+    <p>{item.title}</p>
+    <p>{item.price}</p>
+    <img src={item.img}></img>
+    </div>
+
+
+})}
+       </div> : null}
             <div className="line1"></div>
 
             <div>

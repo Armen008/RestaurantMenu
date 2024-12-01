@@ -4,7 +4,7 @@ import BAR from "../images/BAR.png"
 import BURGER from "../images/BURGER.png"
 
 
-function BurgerCard(propss){
+function BurgerCard({basketElements,setBasketElements,title,price,item,setselectedBurger,selectedBurger}){
    const [count, SetCount]= useState(0);
 
     
@@ -27,7 +27,12 @@ function BurgerCard(propss){
     SetCount(count +1)
  }
 
+let addItems =() =>{
+    setBasketElements((prev)=>prev+count)
+    setselectedBurger((prev)=>[...prev,item])
+    console.log(selectedBurger,"set")
 
+}
 
 
 
@@ -42,15 +47,16 @@ function BurgerCard(propss){
 <img className="img7" src={BURGER}></img>
 
 <div className="Radius-But">
-    <button className="but5"><p className="p18">{propss.sale}</p></button>
+    <button className="but5"><p className="p18">{price}</p></button>
 </div>
-<p className="p19">{propss.size}</p>
+<p className="p19">{title}</p>
 <p className="p20">Максимально толстый <br></br>
 слой мяса</p>
 <div className="display-cont">
     <button className="but7" onClick={MinusCounter}>-</button>
     <p className="p23">{count}</p>
     <button className="but7" onClick={PlusCounter}>+</button>
+    <button className="but8" onClick={addItems}>ADD</button>
 </div>
 <button className="but6">ЗАКАЗАТЬ</button>
 

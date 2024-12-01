@@ -7,20 +7,26 @@ import OurChef from "./OurChef";
 
 
 
-function OurMenu(){
+function OurMenu({basketElements,setBasketElements,burgerCardData,selectedBurger,setselectedBurger}){
+    console.log(burgerCardData)
     return (
         <div>
             <div className="Burger-Img">
            <p className="p17">Наше меню</p>
 
 <div style={{display: "flex",gap: "60px",}}>
-          <BurgerCard
-          sale="400" size="Гамбургер мини"></BurgerCard>
+          {/* <BurgerCard
+          sale="400" size="Гамбургер мини" basketElements={basketElements} setBasketElements={setBasketElements}></BurgerCard>
                   <BurgerCard
-          sale="500"  size="Гамбургер мини"></BurgerCard>
+          sale="500"  size="Гамбургер мини"  basketElements={basketElements} setBasketElements={setBasketElements}></BurgerCard>
                   <BurgerCard
-          sale="600"  size="Гамбургер макси"></BurgerCard>
-
+          sale="600"  size="Гамбургер макси"  basketElements={basketElements} setBasketElements={setBasketElements}></BurgerCard> */}
+{
+    burgerCardData.map((item)=>{
+        return <BurgerCard title={item.title} price={item.price} item={item} basketElements={basketElements} setBasketElements={setBasketElements} selectedBurger={selectedBurger} setselectedBurger={setselectedBurger}></BurgerCard>
+        
+    })
+}
 </div>
 
             </div>
